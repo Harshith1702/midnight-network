@@ -1,0 +1,27 @@
+:root{--bg:#0b0c0d;--line:#1f2326;--fg:#8a9096;--hi:#c7cbcf;--red:#b8473f;--green:#4f8a64}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 system-ui,sans-serif}
+main{max-width:960px;margin:0 auto;padding:16px}
+.mono,input,button,.log,td.m,#summary{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+h1{font:600 15px ui-monospace,Menlo,Consolas,monospace;color:var(--hi);margin:0}
+h2{font:600 13px system-ui;color:var(--hi);margin:24px 0 8px}
+header{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-bottom:1px solid var(--line);padding-bottom:10px}
+#summary b{color:var(--hi);font-weight:400}.down{color:var(--red)}.up{color:var(--green)}
+form{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 6px}
+input,button{background:#101214;color:var(--hi);border:1px solid var(--line);padding:6px 8px;border-radius:2px}
+input[name=name]{width:140px}input[name=url]{flex:1;min-width:200px}input[name=interval]{width:70px}
+button{cursor:pointer;color:var(--fg)}button:hover{color:var(--hi);border-color:var(--fg)}
+:focus-visible{outline:1px solid var(--hi);outline-offset:1px}
+#err{color:var(--red);min-height:20px;font-size:13px}
+table{width:100%;border-collapse:collapse}
+th{font-weight:400;text-align:left;font-size:12px;padding:4px 8px 4px 0;border-bottom:1px solid var(--line)}
+td{padding:7px 8px 7px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+tr.row{cursor:pointer}tr.row:hover td{background:#0f1113}
+.st{display:inline-block;width:8px;height:8px;margin-right:6px;background:var(--fg)}
+.st.UP{background:var(--green)}.st.DOWN{background:var(--red)}
+.sub{display:block;font-size:12px;overflow-wrap:anywhere}.name{color:var(--hi)}
+.log div{padding:3px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.acts button{margin-right:4px;padding:2px 6px;font-size:12px}
+svg{width:100%;height:90px;background:#0e1012;border:1px solid var(--line);display:block}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.cols{grid-template-columns:1fr}.hide-m{display:none}}

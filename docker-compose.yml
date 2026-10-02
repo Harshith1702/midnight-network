@@ -1,0 +1,11 @@
+services:
+  midnight:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      DB_PATH: /data/midnight.db
+      CHECK_TIMEOUT: "5"
+      MIN_INTERVAL: "10"
+      ALLOW_PRIVATE_TARGETS: "${ALLOW_PRIVATE_TARGETS:-false}"
+    volumes: ["./data:/data"]
+    restart: unless-stopped

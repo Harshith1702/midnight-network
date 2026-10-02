@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Midnight Network</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><main>
+<header><h1>midnight network</h1><div id="summary"></div></header>
+<form id="add"><input name="name" placeholder="name" required maxlength="80">
+<input name="url" type="url" placeholder="https://example.com" required>
+<input name="interval" type="number" value="60" min="10" title="check interval, seconds">
+<button>add service</button></form>
+<div id="err" role="alert"></div>
+<section id="services"></section>
+<section id="detail" hidden></section>
+<section><h2>recent incidents</h2><div id="incidents" class="log"></div></section>
+</main><script src="/static/app.js"></script></body></html>
